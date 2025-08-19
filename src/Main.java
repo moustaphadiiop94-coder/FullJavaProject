@@ -4,33 +4,46 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        /*for (int i = 0 ; i <= 10 ; i ++){
-            System.out.println(i);
-        }
 
-        for (int i = 0 ; i <= 10 ; i +=2){
-            System.out.println(i);
-        }
-
-        for (int i = 10 ; i >= 0 ; i -=2){
-            System.out.println(i);
-        }*/
 
         Scanner scanner = new Scanner(System.in);
-        /*System.out.println("Enter how many times you want to loop ");
-        int times = scanner.nextInt();
 
-        for (int i = 1; i <= times; i++) {
-            System.out.println("time " +i);
-        }*/
-        int start=10;
 
-        for(int i= start ;i > 0;i--){
-            System.out.println(i);
-            Thread.sleep(1000);
+       /* for (int i = 0; i <= 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            System.out.print(i + " ");
         }
 
-        System.out.println("Happy new year !");
+        for (int i = 0; i <= 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+            System.out.print(i + " ");
+        }*/
+
+        /*for(int i= 1 ; i<=9; i++){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for(int i= 1 ; i<=9; i++){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for(int i= 1 ; i<=9; i++){
+            System.out.print(i + " ");
+        }
+        System.out.println();*/
+
+        for(int i= 1 ; i<=3; i++){
+            for(int j= 1 ; j<=9; j++){
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+
+
 
         scanner.close();
 
