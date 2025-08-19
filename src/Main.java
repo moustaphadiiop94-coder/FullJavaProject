@@ -28,7 +28,7 @@ public class Main {
         b = scanner.nextDouble();
 
         c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-        System.out.println(" the hypotenuse (side c) is :" +c+"cm");
+        System.out.println(" the hypotenuse (side c) is :" +c+" cm");
 
 
 
