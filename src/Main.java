@@ -4,35 +4,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String adjective1 ;
+        String noun1 ;
+        String adjective2 ;
+        String verb1;
+        String adjective3 ;
 
-        scanner.useLocale(Locale.US); // <-- accepte 2.0
+        System.out.println("Enter an adjective (description): ");
+        adjective1 = scanner.nextLine();
+        System.out.println("Enter an noun (animal or person): ");
+        noun1 = scanner.nextLine();
+        System.out.println("Enter an adjective (description): ");
+        adjective2 = scanner.nextLine();
+        System.out.println("Enter a verb end with -ing (action): ");
+        verb1 = scanner.nextLine();
+        System.out.println("Enter an adjective (description): ");
+        adjective3 = scanner.nextLine();
 
 
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine();
-        System.out.println("Hello " + name + "!");
-
-        System.out.print("Enter your age: ");
-        int age = scanner.nextInt();
-        System.out.println("You are " + age + " years old!");
-
-        System.out.print("What is your gpa: ");
-        double gpa = scanner.nextDouble();
-        System.out.println("Your GPA is: " + gpa);
-
-        // clear the newline left by nextDouble
-        scanner.nextLine();
-
-        System.out.print("Are you a student? (Y/N): ");
-        String studentInput = scanner.nextLine();
-
-        boolean isStudent = studentInput.equalsIgnoreCase("Y");
-
-        if (isStudent) {
-            System.out.println("You are enrolled as a student.");
-        } else {
-            System.out.println("You are not enrolled as a student.");
-        }
+        System.out.println("Today I went to a  " +adjective1+ " zoo.");
+        System.out.println("In an exhibit , I saw a " +noun1+".");
+        System.out.println(" was " +adjective2+ " and " +verb1+ " !");
+        System.out.println("I was " +adjective3+ " !");
 
         scanner.close();
     }
