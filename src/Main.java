@@ -5,38 +5,36 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        /*String [] foods = new String [3];
-
-        foods[0] = "apple";
-        foods[1] = "orange";
-        foods[2] = "water";
-
-        for (String food : foods) {
-            System.out.println(food);
-        }
-*/
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        int size;
+        int [] numbers = { 1 , 2 , 3 , 4 , 5 };
+        String [] fruits ={"apple","orange","banana"};
+        //int target = 3;
+        System.out.println("Enter a fruit to search for :");
+        String target = sc.nextLine();
+        boolean isFound = false;
 
-        System.out.println("Enter the size of foods: ");
-        size = sc.nextInt();
-        sc.nextLine();
-
-        String[] foodsArray = new String[size];
-
-
-
-        //String [] foods = new String [3];
-        for (int i = 0; i < foodsArray.length; i++) {
-            System.out.print("Enter food name: ");
-            foodsArray[i] = sc.nextLine();
+        /*for (int i = 0; i < numbers.length; i++) {
+            if(target == numbers[i]) {
+                System.out.println("element found at index "+i);
+                isFound = true;
+                break;
+            }
+        }*/
+        for(int i = 0 ; i < fruits.length ; i++){
+            if(fruits[i].equals(target)){
+                isFound = true;
+                System.out.println("Element found at index : "+i);
+                break;
+            }
+        }
+        if(!isFound) {
+            System.out.println("element not found");
         }
 
-        for (String food : foodsArray) {
-            System.out.println(food);
-        }
+
+
 
         sc.close();
 
