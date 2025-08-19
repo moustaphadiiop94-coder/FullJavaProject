@@ -3,52 +3,67 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
+        /*String name = "password";
+        int length = name.length();
+        int lastIndex = name.lastIndexOf("a");
+        int index = name.indexOf(" ");
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+        System.out.println(index);
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
-
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
-
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
-
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
-
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
-
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
+        if(name.isEmpty()){
+            System.out.println("Empty name");
+        }else {
+            System.out.println("your name is "+name);
+        }
 
 
+        if(name.contains(" ")){
+            System.out.println("name contains space");
+        }else {
+            System.out.println("name doesnt contain any space");
+        }
+
+        if(name.equalsIgnoreCase("password")){
+            System.out.println("Your name cant be password");
+        }else {
+            System.out.println("Your name is "+name);
+        }
+
+*/
+
+        /*String email = "hello@gmail.com";
+        String username = email.substring(0,5);
+        String domain = email.substring(6);
+        System.out.println(username);
+        System.out.println(domain);*/
+
+        Scanner scanner = new Scanner(System.in);
+
+        String email;
+        String username;
+        String domain;
+
+        System.out.print("Enter your email: ");
+        email = scanner.nextLine();
+
+        if (email.contains("@")) {
+            username = email.substring(0,email.indexOf("@"));
+            domain = email.substring(email.indexOf("@")+1);
+            System.out.println(username);
+            System.out.println(domain);
+        }else {
+            System.out.print("Email must contain @ characters ");
+
+        }
+
+         //email = "hello@gmail.com";
 
 
+
+
+
+        scanner.close();
 
     }
 }
