@@ -3,37 +3,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        String name = "SpongeBob";
+        char firstLetter = 'S';
+        int age = 25;
+        double height = 1.5;
+        boolean isEmplyed = true;
 
-        scanner.useLocale(Locale.US); // <-- accepte 2.0
+        System.out.printf("Hello %s \n",name);
+        System.out.printf("Your name starts with a %c \n",firstLetter);
+        System.out.printf("Your are %d years old \n",age);
+        System.out.printf("Your are %.2f inches tall \n",height);
+        System.out.printf("Employed: %b \n",isEmplyed);
 
+        System.out.printf("%s is %d years old \n",name,age);
 
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine();
-        System.out.println("Hello " + name + "!");
-
-        System.out.print("Enter your age: ");
-        int age = scanner.nextInt();
-        System.out.println("You are " + age + " years old!");
-
-        System.out.print("What is your gpa: ");
-        double gpa = scanner.nextDouble();
-        System.out.println("Your GPA is: " + gpa);
-
-        // clear the newline left by nextDouble
-        scanner.nextLine();
-
-        System.out.print("Are you a student? (Y/N): ");
-        String studentInput = scanner.nextLine();
-
-        boolean isStudent = studentInput.equalsIgnoreCase("Y");
-
-        if (isStudent) {
-            System.out.println("You are enrolled as a student.");
-        } else {
-            System.out.println("You are not enrolled as a student.");
-        }
-
-        scanner.close();
     }
 }
