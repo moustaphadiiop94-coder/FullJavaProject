@@ -3,52 +3,46 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+        /*String name = "";
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
+        while (name.isEmpty()){
+            System.out.println("Please enter your name");
+            name = scanner.nextLine();
+        }
 
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
+        System.out.println("Welcome " + name);
 
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
+      */
 
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
-
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
-
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
+       /* while (1==1){
+            System.out.println("I m stuck to this loop");
+        }*/
 
 
+        /*String response="";
+
+        while (!response.equals("Q")){
+            System.out.println("You are playing a game");
+            System.out.println("Press Q to exit the game");
+            response = scanner.next().toUpperCase();
+        }
+        System.out.println("You quit the game");
+*/
+        int age = 0;
+        System.out.print("Enter your age: ");
+        age = scanner.nextInt();
+        do{
+            System.out.println("You are negative");
+            System.out.print("Enter your age: ");
+            age = scanner.nextInt();
+        }while (age < 0);
+        System.out.print("Your age is: "+age+" years old");
 
 
+        scanner.close();
 
     }
 }
