@@ -4,30 +4,41 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String [] fruits = {"apple" , "banana", "orange", "pineapple"};
-        System.out.println(fruits[0]);
-        System.out.println(fruits[1]);
-        System.out.println(fruits[2]);
-        System.out.println(fruits[3]);
 
-        fruits[0] = "tomato";
-        System.out.println(fruits[0]);
+        /*String [] foods = new String [3];
 
-        int numOfFruits = fruits.length;
-        System.out.println(numOfFruits);
+        foods[0] = "apple";
+        foods[1] = "orange";
+        foods[2] = "water";
 
-        for (int i = 0; i < numOfFruits; i++) {
-            System.out.print(fruits[i]+" ");
+        for (String food : foods) {
+            System.out.println(food);
         }
-        System.out.println();
+*/
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
 
-        Arrays.sort(fruits);
+        int size;
 
-        Arrays.fill(fruits, "apple");
+        System.out.println("Enter the size of foods: ");
+        size = sc.nextInt();
+        sc.nextLine();
 
-        for (String fruit : fruits) {
-            System.out.print(fruit+" ");
+        String[] foodsArray = new String[size];
+
+
+
+        //String [] foods = new String [3];
+        for (int i = 0; i < foodsArray.length; i++) {
+            System.out.print("Enter food name: ");
+            foodsArray[i] = sc.nextLine();
         }
+
+        for (String food : foodsArray) {
+            System.out.println(food);
+        }
+
+        sc.close();
 
 
     }
