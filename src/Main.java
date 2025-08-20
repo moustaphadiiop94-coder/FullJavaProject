@@ -1,51 +1,68 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
+        //ArrayList = A resizeable array that stores objects (autoboxing).
+        // Array are fixed in size , but ArrayLists can change .
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+      /*  ArrayList<Integer> list = new ArrayList<>();
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
+        list.add(1);
+        list.add(2);
+        list.add(3);
 
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
+        System.out.println(list);
 
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
 
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
+        ArrayList<String> fruits = new ArrayList<>();
 
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
+        fruits.add("Apple");
+        fruits.add("Orange");
+        fruits.add("Coconut");
+        fruits.add("Banana");
 
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
+        //fruits.remove(0);
+        //fruits.set(0, "Pineapple");
 
+        System.out.println(fruits);
+        System.out.println(fruits.get(0));
+        System.out.println(fruits.size());
+
+        System.out.println();
+
+        Collections.sort(fruits);
+
+        System.out.println(fruits);
+
+        for (String fruit : fruits) {
+            System.out.println(" for " +fruit);
+        }
+
+*/
+
+        Scanner scanner = new Scanner(System.in);
+        Locale.setDefault(Locale.US);
+
+        ArrayList<String> foods = new ArrayList<>();
+
+        System.out.println("Enter the number of foods you want to add: ");
+        int numberOfFoods = scanner.nextInt();
+        scanner.nextLine();
+        for (int i = 1; i <= numberOfFoods; i++) {
+            System.out.println("Enter the name of food " + i + ": ");
+            String name = scanner.nextLine();
+            foods.add(name);
+
+        }
+
+        System.out.println(foods);
+
+
+        scanner.close();
 
 
 
