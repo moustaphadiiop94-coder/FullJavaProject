@@ -3,48 +3,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+        Animal animal ;
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
-
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
-
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
-
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
-
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
-
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
+        System.out.println("Would you like a dog or a cat ? (1 = dog, 2 = cat)");
+        int choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                animal = new Dog();
+                animal.speak();
+                break;
+            case 2:
+                animal = new Cat();
+                animal.speak();
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
 
 
 
