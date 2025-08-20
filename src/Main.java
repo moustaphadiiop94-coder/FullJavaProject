@@ -3,51 +3,33 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+        String [] fruits = {"apple ","orange ","banana "};
+        String [] vegetables = {"potato ","onion ","carrot "};
+        String [] meats = {"chicken ","beef ","fish ","pork"};
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
-
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
-
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
-
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
-
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
-
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
+        //String [][] groceries = {fruits,vegetables,meats};
+        String [][] groceries = {{"apple ","orange ","banana "},
+                                 {"potato ","onion ","carrot "},
+                                 {"chicken ","beef ","fish ","pork"}};
+        groceries[0][0] = "pineapple ";
+        groceries[1][0] = "celery ";
+        groceries[1][2] = "grape ";
+        groceries[2][1] = "eggs ";
+        for (String[] foods : groceries) {
+            for (String food : foods) {
+                System.out.print(food);
+            }
+            System.out.println();
+        }
 
 
 
+
+        sc.close();
 
 
     }
