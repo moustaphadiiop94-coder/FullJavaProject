@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
-
 public class Organism {
+    boolean isAlive;
+
+    Organism() {
+        isAlive = true;
+    }
 }

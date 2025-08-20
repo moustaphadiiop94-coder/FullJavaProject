@@ -1,4 +1,15 @@
-package PACKAGE_NAME;
+public class Student extends Person {
+    double gpa;
 
-public class Student {
+
+    Student(String firstName,String lastName ,double gpa) {
+        super(firstName,lastName);
+        this.gpa = gpa;
+    }
+
+   void  showGpa(){
+        System.out.println("The student gpa is "+gpa);
+
+    }
+
 }

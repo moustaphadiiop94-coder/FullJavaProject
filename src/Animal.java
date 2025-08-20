@@ -1,11 +1,11 @@
-public class Animal {
-    boolean isAlive;
+public class Animal extends Organism{
 
-    Animal() {
-        isAlive = true;
-    }
 
     void eat(){
         System.out.println("Eating...");
+    }
+
+    void move(){
+        System.out.println("Running...");
     }
 }
