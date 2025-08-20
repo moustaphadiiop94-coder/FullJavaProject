@@ -7,31 +7,29 @@ public class Main {
         Locale.setDefault(Locale.US);
         //Scanner sc = new Scanner(System.in);
 
-        Car car = new Car();
+        Student student1 = new Student("tapha",30,3.2);
+        student1.study();
+        Student student2 = new Student("Diara",26,2.9);
+        student2.study();
+        Student student3 = new Student("Gabriel",25,1.9);
+        student3.study();
 
-        car.isRunning = true;
-
-        /*System.out.println(car);
-        System.out.println(car.model);
-        System.out.println(car.make);
-        System.out.println(car.year);
-        System.out.println(car.price);
-        System.out.println(car.isRunning);*/
-
+        System.out.print(student1.name+" ");
+        System.out.print(student1.age+" ");
+        System.out.print(student1.gpa+" ");
+        System.out.print(student1.isEnrolled+" ");
+        System.out.println();
+        System.out.print(student2.name+" ");
+        System.out.print(student2.age+" ");
+        System.out.print(student2.gpa+" ");
+        System.out.print(student2.isEnrolled+" ");
+        System.out.println();
+        System.out.print(student3.name+" ");
+        System.out.print(student3.age+" ");
+        System.out.print(student3.gpa+" ");
+        System.out.print(student3.isEnrolled+" ");
         System.out.println();
 
-        /*car.start();
-        car.stop();
-        car.drive();
-        car.brake();
-
-*/
-        Car car1 = new Car();
-        Car car2 = new Car();
-        car1.model="renault";
-        car2.model="dacia";
-        System.out.println(car1.model);
-        System.out.println(car2.model);
 
 
 
