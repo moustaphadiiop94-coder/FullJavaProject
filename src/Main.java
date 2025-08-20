@@ -1,53 +1,51 @@
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
+        Locale.setDefault(Locale.US);
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
+        //How to write a file using java (4 popular options)
+        //FileWriter = Good for small or medium size text files
+        //BufferedWriter = Better performance for large amounts of text
+        //PrintWriter = Best for structured data , like reports or logs
+        //FileOutputStream = Best for binary files (e.g images , audio files)
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+        //FileWriter fw = new FileWriter("test.txt");
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
+       /* try (FileWriter fw = new FileWriter("test.txt")){
+            fw.write("I like Java");
+            System.out.println("file written");
 
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
+        }catch (IOException e){
+            e.printStackTrace();
+            System.out.println(" Could not write a file "+e.getMessage());
 
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
+        }*/
+        String filePath="/Users/moustaphadiop/Desktop/testDEVBis.txt";
+        //String textContent = "I like Java  \n its very good";
+        String textContent = """
+                Roses are red 
+                Violet are blue
+                Orange is a new black
+                hello boy 
+                """;
+        try (FileWriter fw = new FileWriter(filePath)){
+            fw.write(textContent);
+            System.out.println("file written");
 
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
+        }
+        catch (FileNotFoundException e){
+            System.out.println("File path not found");
+        }
+        catch (IOException e){
+            e.printStackTrace();
+            System.out.println(" Could not write a file "+e.getMessage());
 
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
-
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
-
-
-
+        }
 
 
     }
