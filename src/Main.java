@@ -1,51 +1,47 @@
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
+        //Locale.setDefault(Locale.US);
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+       /* LocalDate date = LocalDate.now();
+        LocalTime time = LocalTime.now();
+        LocalDateTime dateTime = LocalDateTime.now();
+        Instant instant = Instant.now();
+        System.out.println(date);
+        System.out.println(time);
+        System.out.println(dateTime);
+        System.out.println(instant);
+*/
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
+       /* LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
+        String newDateTime = dateTime.format(formatter);
 
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
+        System.out.println(newDateTime);
+*/
 
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
+        /*LocalDate date = LocalDate.of(2024,12,25);
+        System.out.println(date);*/
 
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
+        LocalDateTime date1 = LocalDateTime.of(2020, Month.JANUARY, 1, 0, 0, 0);
+        LocalDateTime date = LocalDateTime.of(2024, 12, 1, 0, 0, 0);
+        System.out.println(date1);
+        System.out.println(date);
 
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
+        if (date.isBefore(date1)) {
+            System.out.println(date1 + " is earlier " + date);
+        } else if (date.isEqual(date1)) {
+            System.out.println(date1 + " is equal to " + date);
 
+        } else {
+            System.out.println(date1 + " is later " + date);
+        }
 
 
 
