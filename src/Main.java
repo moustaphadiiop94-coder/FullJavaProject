@@ -1,50 +1,38 @@
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
+        //Generics is a concept where you can write a class , interface or method that
+        //is compatible whit different data types .
+        // <T> type parameter (placeholder that gets replaced with a real type)
+        // <String> type argument (specifies type)
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+        /*ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+        fruits.add("Pear");
+        fruits.add("Grape");*/
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
+        /*Box <String> box = new Box<>();
+        box.setItem("banana");
+        System.out.println(box.getItem());
+*/
+        /*Box <Integer> box = new Box<>();
+        box.setItem(3);
+        System.out.println(box.getItem());
+*/
+        Product <String ,Double> product = new Product<>("Apple",0.50);
 
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
+        System.out.println(product.item);
+        System.out.println(product.price);
 
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
-
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
-
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
-
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
+        Product <String ,Integer> product2 = new Product<>("Ticket",2);
+        System.out.println(product2.item);
+        System.out.println(product2.price);
 
 
 
