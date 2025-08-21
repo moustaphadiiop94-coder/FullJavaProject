@@ -3,52 +3,44 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*tring name = "SpongeBob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 1.5;
-        boolean isEmplyed = true;
+        //Enum enumeration a special kind of class that represent a fixed set of constants.
+        //they improve code readability and easy to maintain . More efficient whith switches when comparing Strings.
 
-        System.out.printf("Hello %s \n",name);
-        System.out.printf("Your name starts with a %c \n",firstLetter);
-        System.out.printf("Your are %d years old \n",age);
-        System.out.printf("Your are %.2f inches tall \n",height);
-        System.out.printf("Employed: %b \n",isEmplyed);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("%s is %d years old \n",name,age);*/
+        Day day = Day.MONDAY;
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
-        System.out.printf("%.1f\n",price1);
-        System.out.printf("%.1f\n",price2);
-        System.out.printf("%.1f\n",price3);
+        System.out.println(day);
 
-        System.out.printf("%.2f\n",price1);
-        System.out.printf("%.2f\n",price2);
-        System.out.printf("%.2f\n",price3);
+        System.out.println(day.getDayNumber());
 
-        System.out.printf("%+.2f\n",price1);
-        System.out.printf("%+.2f\n",price2);
-        System.out.printf("%+.2f\n",price3);
+        System.out.println("Enter a day of week");
+        String dayOfWeek = scanner.nextLine().toUpperCase(Locale.US);
 
-        System.out.printf("%+(,.2f\n",price1);
-        System.out.printf("%+(,.2f\n",price2);
-        System.out.printf("%+(,.2f\n",price3);
+        try {
+            day = Day.valueOf(dayOfWeek);
 
-        int id1=1;
-        int id2=23;
-        int id3=453;
-        int id4=7678;
-
-        System.out.printf("%4d\n",id1);
-        System.out.printf("%4d\n",id2);
-        System.out.printf("%4d\n",id3);
-        System.out.printf("%2d\n",id4);
+            switch(day) {
+                case MONDAY ,
+                     TUESDAY,
+                     WEDNESDAY,
+                     THURSDAY,
+                     FRIDAY-> System.out.println("its Week day");
+                case SATURDAY,SUNDAY -> System.out.println("its Weekend");
+            }
 
 
 
+        }catch (IllegalArgumentException e){
+            System.out.println("Illegal argument "+e.getMessage());
+        }
+        catch (Exception e) {
+            System.out.println("Invalid day");
+        }
 
+
+
+        scanner.close();
 
     }
 }
